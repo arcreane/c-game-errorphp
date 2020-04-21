@@ -9,9 +9,7 @@ class Character
 
     void receiveDommage(int dommage);
     void attack(Character &target);
-    void drinkLifePotion(int numberPotion);
-    void drinkArmorPotion(int numberPotion);
-    void drinkMagicResPotion(int numberPotion);
+    void drinkPotion(int numberPotion);
     bool isAlive();
 
     private:

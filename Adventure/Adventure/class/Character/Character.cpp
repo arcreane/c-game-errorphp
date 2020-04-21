@@ -20,29 +20,9 @@ void Character::attack(Character &cible)
     cible.receiveDommage(falseAttack);
 }
 
-void Character::drinkLifePotion(int amountOfPotion)
+void Character::drinkPotion(int amountOfPotion)
 {
     life += amountOfPotion;
-
-    if (life > 100)
-    {
-        life = 100;
-    }
-}
-
-void Character::drinkArmorPotion(int amountOfPotion)
-{
-    armor += amountOfPotion;
-
-    if (life > 100)
-    {
-        life = 100;
-    }
-}
-
-void Character::drinkMagicResPotion(int amountOfPotion)
-{
-    magic_res += amountOfPotion;
 
     if (life > 100)
     {
