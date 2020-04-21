@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../Character/Character.h"
-#include "../Item/items.h"
+#include "./class/Character/Character.h"
+#include "./class/Item/items.h"
 
 int main() {
     Potions newPotion;
