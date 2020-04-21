@@ -1,12 +1,15 @@
+#pragma once
+
 enum eWeapons
 {
     DAGUE,
     EPEE,
     BAGUETTE,
     FLECHE
+   
 };
 
-enum ePotions
+enum ePotionType
 {
     POTION_RES,
     POTION_HEAL,
@@ -16,10 +19,22 @@ enum ePotions
 
 class Weapons
 {
-    private: int physical_damage; int magic_damage;
+    private: 
+        int physical_damage; 
+        int magic_damage;
+
 };
 
 class Potions
 {
-    private: int resistance; int life; int armor;
+    private: 
+       
+        ePotionType mPotionType;
+        int resistance; 
+        int life; 
+        int armor;
+
+    public:
+         void setPotionType();
+        void getPotionType();
 };

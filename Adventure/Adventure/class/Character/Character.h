@@ -3,6 +3,15 @@
 
 #include <string>
 
+enum eEnemy
+{
+    WARRIOR,
+    WIZARD,
+    THIEF,
+    DRAGON,
+    MAX_VALUE
+};
+
 class Character
 {
     public:
