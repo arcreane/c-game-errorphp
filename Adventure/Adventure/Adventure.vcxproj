@@ -141,7 +141,6 @@
     <ClCompile Include="class\Character\Character.cpp" />
     <ClCompile Include="class\Programme\programme.cpp" />
     <ClCompile Include="class\Room\room.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\Character\Character.h" />
