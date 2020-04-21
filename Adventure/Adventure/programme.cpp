@@ -4,9 +4,7 @@
 
 int main() {
     Potions newPotion;
-    newPotion.setPotionType();
-    newPotion.getPotionType();
+    newPotion.createPotion();
 
-    
     return 0;
 }

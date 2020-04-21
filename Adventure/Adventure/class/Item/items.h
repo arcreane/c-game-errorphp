@@ -37,4 +37,5 @@ class Potions
     public:
          void setPotionType();
         void getPotionType();
+        void createPotion();
 };

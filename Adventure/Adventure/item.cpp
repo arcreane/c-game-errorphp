@@ -34,3 +34,9 @@ void Potions::getPotionType() {
 		break;
 	}
 }
+
+
+void Potions::createPotion() {
+	Potions::setPotionType();
+	Potions::getPotionType();
+}
