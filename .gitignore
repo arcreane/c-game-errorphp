@@ -1,2 +1,5 @@
 .vs/
 /Adventure/Adventure/Debug
+.idea/
+CMakeLists.txt
+cmake-build-debug
