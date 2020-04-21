@@ -1,45 +1,56 @@
 #include "Character.h"
-#include "Race.h"
-#include "Stats.h"
-#include <iostream>
-#include <string>
-#include <cstring>
 
 using namespace std;
 
-Character::Character(Race race, Stats stats)
+void Character::receiveDommage(int nbDegats)
 {
-    this->race = race;
-    this->stats = stats;
-}
+    life -= nbDegats;
 
 
-void Character::set_effective_level(int level)
-{
-    this->effective_level = level;
-}
-void Character::set_total_hitpoints(int hp)
-{
-    this->total_hitpoints = hp;
+    if (life < 0)
+    {
+        life = 0;
+    }
 }
 
-int Character::get_effective_level() const
+void Character::attack(Character &cible)
 {
-    return effective_level;
-}
-int Character::get_total_hitpoints() const
-{
-    return total_hitpoints;
+    int falseAttack = 55;
+    
+    cible.receiveDommage(falseAttack);
 }
 
-Race Character::get_race() const{
-    return race;
-}
-
-Stats Character::get_stats() const{
-    return stats;
-}
-
-void Character::print_character_info()
+void Character::drinkLifePotion(int amountOfPotion)
 {
+    life += amountOfPotion;
+
+    if (life > 100)
+    {
+        life = 100;
+    }
+}
+
+void Character::drinkArmorPotion(int amountOfPotion)
+{
+    armor += amountOfPotion;
+
+    if (life > 100)
+    {
+        life = 100;
+    }
+}
+
+void Character::drinkMagicResPotion(int amountOfPotion)
+{
+    magic_res += amountOfPotion;
+
+    if (life > 100)
+    {
+        life = 100;
+    }
+}
+
+bool Character::isAlive()
+{
+    return life > 0;
 }

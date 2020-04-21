@@ -1,27 +1,24 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
-#include "Race.h"
-#include "Stats.h"
+#ifndef DEF_CHARACTER
+#define DEF_CHARACTER
+
 #include <string>
-#include <cstring>
 
-class Character{
-private:
-    Race race;
-    Stats stats;
-    int effective_level;
-    int total_hitpoints;
-public:
-    Character(Race race, Stats stats);
-    
-    void set_effective_level(int level);
-    void set_total_hitpoints(int hp);
+class Character
+{
+    public:
 
-    int get_effective_level() const;
-    int get_total_hitpoints() const;
-    Race get_race() const;
-    Stats get_stats() const;
-    void print_character_info();
+    void receiveDommage(int dommage);
+    void attack(Character &target);
+    void drinkLifePotion(int numberPotion);
+    void drinkArmorPotion(int numberPotion);
+    void drinkMagicResPotion(int numberPotion);
+    bool isAlive();
+
+    private:
+
+    int life;
+    int armor;
+    int magic_res;
 };
 
 #endif
