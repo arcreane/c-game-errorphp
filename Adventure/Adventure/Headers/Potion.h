@@ -1,13 +1,5 @@
 #pragma once
 
-enum eWeapons
-{
-    DAGUE,
-    EPEE,
-    BAGUETTE,
-    FLECHE
-   
-};
 
 enum ePotionType
 {
@@ -17,13 +9,6 @@ enum ePotionType
 };
 
 
-class Weapons
-{
-    private: 
-        int physical_damage; 
-        int magic_damage;
-
-};
 
 class Potions
 {

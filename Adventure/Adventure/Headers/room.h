@@ -1,11 +1,22 @@
 #pragma once
 #include <iostream>
+class Monstre;
+class Hero;
+
 class room
 {
+private:
+	int m_iIndex;
+	Monstre* m_pMonster;
 
 public:
 	room();
 	~room();
+	 
+	void init(int p_iIndex);
+
+	void Enter(Hero* p_pHero);
+	void pickItem(Hero* p_pHero);
 
 	//	void set_enemy(enemy i) {
 	//		enemi = i;			//remplacer par les vraies

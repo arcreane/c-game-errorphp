@@ -12,14 +12,18 @@ enum eEnemy
     MAX_VALUE
 };
 
-class Character
+ class Character
 {
+protected :
+    Character(int p_iLife, int p_iArmor, int p_iMagic);
+
     public:
 
     void receiveDommage(int dommage);
-    void attack(Character &target);
     void drinkPotion(int numberPotion);
     bool isAlive();
+
+    virtual void attack(Character& target) = 0;
 
     private:
 
